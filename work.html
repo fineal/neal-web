@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Jomolhari&display=swap" rel="stylesheet"> 
+    <title>WORK</title>
+    <style>
+        *{margin: 0;padding: 0;
+            font-family: 'Jomolhari', serif;
+        }
+        body{height: 200vh;}
+        .container{display: flex;flex-direction: column;align-items: center;justify-content: center;height: 100%;}
+        .row{display: flex;width: 60%;height: 100%;}
+        .row h1{font-size: 5rem;}
+        /* .row ul{display: flex;} */
+        .rowa{position: relative;}
+        .menu{position: absolute;top: 5%;right: 1%;}
+        .menu ul{display: flex;justify-content: right;}
+        .menu ul li{list-style: none;margin: 5px 1rem;}
+        .menu a{text-decoration: none;color: black;}
+        .box{background: black;width: 100%;height: 200px;display: flex;position: relative;}
+        .box h2{font-size: 3rem;}
+        .box h3{font-size: 2rem;}
+        .box img{width: 100%;height: 100%;object-fit: cover;}
+
+        .title{position: absolute;top: -29%;right: 5%;}
+        .more{position: absolute;top: 100%;left: 85%;color: #000;}
+        .photo{background: lightgrey;height: 100%;width: 40%;position: absolute;top: -15%;left: 10%;}
+
+        .ani1{animation: animation 1s both alternate;}
+        .delay1{animation-delay: 0.5s;}
+        .delay2{animation-delay: 1s;}
+        .delay3{animation-delay: 1.5s;}
+        @keyframes animation {
+            from{opacity: 0;}
+            to{opacity: 1;}
+        }
+        @media screen and (max-width: 767px){
+            body{height: 250vh;}
+            .menu{right: -28%;justify-content: center;}
+            .rowa{justify-content: center;}
+            .rowa>.ani1{padding: 25% 0 0 0;}
+            .photo{top: 10%;width: 80%;}
+            .title{top: -24%;}
+            .box h2{font-size: 2.5rem;}
+            .more{left: 75%;}
+            /* .rowg>.box>.title{right: -20%;} */
+            /* .rowg>.box>.title{top: -15%;} */
+            /* .rowg>.box>.title>h2{font-size: 2rem;} */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row rowa">
+            <div class="ani1"><h1>W</h1></div>
+            <div class="ani1 delay1"><h1>O</h1></div>
+            <div class="ani1 delay2"><h1>R</h1></div>
+            <div class="ani1 delay3"><h1>K</h1></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/about.html">ABOUT</a></li>
+                    <li><a href="/work.html">WORK</a></li>
+                    <li><a href="mailto:henrynte@gmail.com">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row row2">
+            
+            <div class="box boxf">
+                <div class="title"><h2>Frontend</h2></div>
+                    <figure>
+                        <div class="photo">
+                            <a href="/frontend.html">
+                                <img src="/images/real_sake.jpg" alt="">
+                            </a>
+                        </div>
+                    </figure>
+                    <a href="/frontend.html">
+                        <div class="more"><h3>more...</h3></div>
+                    </a>
+            </div>
+            
+        </div>
+        <div class="row row2">
+            <div class="box">
+                <div class="title"><h2>webUI/UX</h2></div>
+                    <figure>
+                        <div class="photo">
+                            <a href="/ui.html">
+                                <img src="/images/arc_mockup_2.jpg" alt="">
+                            </a>
+                        </div>
+                    </figure>
+                    <a href="/ui.html">
+                        <div class="more"><h3>more...</h3></div>
+                    </a>
+            </div>
+        </div>
+        <div class="row row2 rowg">
+            <div class="box">
+                <div class="title"><h2>GameDevelop</h2></div>
+                <figure>
+                    <div class="photo">
+                        <img src="/images/1212.jpg" alt="">
+                    </div>
+                </figure>
+                <div class="more"><h3>more...</h3></div>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="box">
+                <div class="title"><h2>Photography</h2></div>
+                <figure>
+                    <div class="photo"></div>
+                    <!-- <img src="" alt=""> -->
+                </figure>
+                <div class="more"><h3>more...</h3></div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="/jquery-3.4.1.min.js"></script>
+    <script>
+        $(".boxf").click(function(){
+            
+        })
+    </script>
+</body>
+</html>

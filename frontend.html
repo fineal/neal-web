@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Jomolhari&display=swap" rel="stylesheet">
+    <title>WORK</title>
+    <style>
+        *{margin: 0;padding: 0;
+            font-family: 'Jomolhari', serif;
+        }
+        body{height: 80vh;}
+        .container{display: flex;flex-direction: column;align-items: center;justify-content: start;height: 100%;}
+        .row{display: flex;width: 70%;}
+        .row h1{font-size: 5rem;}
+        .row2{margin-top: 5rem;}
+        /* .row ul{display: flex;} */
+        .rowa{position: relative;}
+        .menu{position: absolute;top: 5%;right: 1%;}
+        .menu ul{display: flex;justify-content: right;}
+        .menu ul li{list-style: none;margin: 5px 1rem;}
+        .menu a{text-decoration: none;color: black;}
+        .box{background: gainsboro;width: 100%;display: flex;position: relative;}
+        .box h2{font-size: 3rem;}
+        .box h3{font-size: 1rem;}
+        .box img{width: 100%;height: 100%;object-fit:contain;}
+        .box figure{display: flex;}
+
+        .title{position: absolute;top: -3.6rem;right: 5%;color: gainsboro;}
+        /* .titleB{position: absolute;top: -1.7%;left: 5%;color: gainsboro;} */
+        /* .titleB h2{font-size: 2rem;} */
+        /* .title h2{background: linear-gradient(90deg,deepskyblue,rgb(255, 0, 149));color: transparent;background-clip: text;opacity: 80%;} */
+        /* .titleB{position: absolute;top: -2%;left: 5%;} */
+        /* .titleB h2{font-size: 2rem;} */
+        .more{width: 40%;padding: 2rem;}
+        .more h3{padding-top: 10rem;}
+        /* .more a{text-decoration: none;} */
+        .more a{text-align: center;font-size: 1.25rem;color: black;}
+        .photo{width: 60%;padding: 1rem;}
+
+        .ani1{animation: animation 1s both alternate;}
+        .delay1{animation-delay: 0.5s;}
+        .delay2{animation-delay: 1s;}
+        .delay3{animation-delay: 1.5s;}
+        @keyframes animation {
+            from{opacity: 0;}
+            to{opacity: 1;}
+        }
+        @media screen and (max-width: 767px){
+            body{height: 250vh;}
+            .menu{right: -20%;}
+            .rowa>.ani1{padding: 25% 0 0 0;}
+            .photo{top: 10%;width: 80%;}
+            .rowg>.box>.title{right: -20%;}
+            .rowg>.box>.title>h2{font-size: 2.5rem;}
+            .box figure{flex-direction: column;}
+            .more{width: 80%;}
+            .more h3{padding: 0;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row rowa">
+            <div class="ani1"><h1>W</h1></div>
+            <div class="ani1 delay1"><h1>O</h1></div>
+            <div class="ani1 delay2"><h1>R</h1></div>
+            <div class="ani1 delay3"><h1>K</h1></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/about.html">ABOUT</a></li>
+                    <li><a href="/work.html">WORK</a></li>
+                    <li><a href="mailto:henrynte@gmail.com">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row row2">
+            <div class="box">
+                <!-- <div class="titleB"><h2>Back</h2></div> -->
+                <div class="title"><h2>Frontend</h2></div>
+                <figure>
+                    <div class="photo">
+                        <img src="/images/real_sake.jpg" alt="">
+                    </div>
+                    <div class="more">
+                        <h3>於資策會進修期間小組製作的網站，為瞄準清酒客群所設計，由我進行網頁整體的視覺設計及UI規劃，並進行首頁、關於我們、商品列表的切版與前端。</h3>
+                        <a href="/work.html">
+                            <br>back
+                        </a>
+                    </div>
+                </figure>
+            </div>
+        </div>
+        
+        
+    </div>
+</body>
+</html>

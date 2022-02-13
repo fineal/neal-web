@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,500,700,800&display=swap" rel="stylesheet"> 
+    <style>
+        *{margin: 0;padding: 0;font-family: 'Alegreya Sans SC', sans-serif;}
+        body{height: 100vh;transition: .5s;}
+        /* canvas { width: 100%; height: 100% } */
+        /* .transition{transition:.5s;} */
+        .container{width: 100%;height: 100vh;position: relative;}
+        .path1{clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%, 0 100%);background: rgba(0, 0, 0, 1);height: 100vh;
+        transition: clip-path .7s;display: flex;flex-direction: column;align-items: center;}
+        .path1:hover{clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 100%);}
+        /* .path1::after:hover{clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 100%);} */
+        /* .path2:hover .path1{background: turquoise;} */
+        /* .path1:hover .path2{clip-path: polygon(100% 50%, 100% 49%, 100% 100%, 50% 100%, 50% 100%);} */
+        .path2{clip-path: polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%);background: rgb(255, 255, 255);height: 100vh;width: 100%;
+        position: absolute;top: 0;left: 0;transition: clip-path .7s;display: flex;flex-direction: column;align-items: center;}
+        .path2:hover{clip-path: polygon(51% 0, 100% 0, 100% 100%, 0 100%, 0 51%);}
+        /* .path2:hover .path1{clip-path: polygon(0 0, 50% 0, 50% 1%, 0 50%, 0 50%);} */
+        .path1>h2{color:white;text-align: center;font-size: 5rem;font-weight: normal;}
+        .path2>h2{color:black;text-align: center;font-size: 5rem;font-weight: normal;}
+        .path1>.box>h3{color: white;text-align: center;font-size: 3rem;}
+        .path2>.box>h3{color: black;text-align: center;font-size: 3rem;}
+        .menu{position: absolute;top: 47%;left: 3%;width: 100px;}
+        .menu>ul>li{color: white;font-size: 2rem;list-style: none;}
+        .menu>ul>li>a{text-decoration: none;color: white;}
+        .box>figure{margin: 20% 0;}
+        .cover-fit{width: 100%;height: 100%;object-fit: cover;border-radius: 50%;}
+        .box{width: 25%;}
+        .about{position: absolute;top: 35%;right: 15%;width: 100px;}
+        .about>ul>li{color: black;font-size: 2rem;}
+        @media screen and (max-width: 767px){
+            .box{width: 70%;}
+            .box>figure{margin: 5% 0;}
+            .about{right: 20%;top: 70%;}
+            .menu{color: black;background: black;width: 150px;top: 75%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="path1">
+            <h2>ΛBΘUT ΜE</h2>
+            <div class="box">
+                <h3>ИΞΛL</h3>
+                <figure>
+                    <img class="cover-fit" src="/images/photoAA.jpg" alt="">
+                </figure>
+            </div>
+        </div>
+        <div class="path2">
+            <h2>ΛBΘUT ΜΞ</h2>
+            <div class="box">
+                <h3>ИΞΛL</h3>
+                <figure>
+                    <img class="cover-fit" src="/images/photoA.jpg" alt="">
+                </figure>
+            </div>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="/index.html">HΘMΞ</a></li>
+                <li><a href="/about.html">ΛBΘUT</a></li>
+                <li><a href="/work.html">WΘRK</a></li>
+                <li><a href="mailto:henrynte@gmail.com">CΘИTΛCT</a></li>
+            </ul>
+        </div>
+        <div class="about">
+            <ul>
+                <li>PhotoShop</li>
+                <li>Illustrator</li>
+                <li>adobexd</li>
+                <li>SketchUP</li>
+                <li>Maya</li>
+                <li>html5</li>
+                <li>css3</li>
+                <li>javascript</li>
+                <li>three.js</li>
+            </ul>
+        </div>
+    </div>
+    <script src="/jquery-3.4.1.min.js"></script>
+    <!-- <script src="/three.min.js"></script> -->
+    <!-- <script src="script.js"></script> -->
+    <script>
+        // $(".path1")function(){
+        //     if (function.mouseenter) {
+                
+        //     } else if (condition) {
+                
+        //     } else {
+        //     }
+                
+                
+        //     }
+        // }
+        $(".path1").mouseenter(function(){
+                $(".path2").css("opacity","0").css("transition",".5s")    
+                // $(".path2").css("clip-path","polygon(100% 50%, 100% 49%, 100% 100%, 50% 100%, 50% 100%)")    
+        })
+        $(".path1").mouseleave(function(){
+                $(".path2").css("opacity","1").css("transition",".5s")    
+        //         $(".path2").css("clip-path","polygon(100% 0, 100% 0, 100% 100%, 0 100%, 0 100%)")
+        })
+        // $(".path2").mouseenter(function(){
+        //         $(".path1").css("clip-path","polygon(0 0, 50% 0, 50% 1%, 0 50%, 0 50%)")    
+        // })
+        // $(".path2").mouseleave(function(){
+        //         $(".path1").css("clip-path","polygon(0 0, 100% 0, 100% 0, 0 100%, 0 100%)")
+        // })
+
+    </script>
+</body>
+</html>
